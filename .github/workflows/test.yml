@@ -8,6 +8,6 @@ jobs:
     - name: Publish to Registry
       uses: AhnSeongHyun/action-tag-docker-build-push@master
       with:
-        name: ash84/test-action
+        repo_name: ash84/test-action
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
