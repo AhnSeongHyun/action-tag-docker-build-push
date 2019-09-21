@@ -23,8 +23,8 @@ TAG=$(echo ${GITHUB_REF} | sed -e "s/refs\/tags\///g")
 echo ${INPUT_PASSWORD} | docker login -u ${INPUT_USERNAME} --password-stdin 
 
 DOCKERNAME="${INPUT_REPO_NAME}:${TAG}"
-
-docker build --cache-from -t ${DOCKERNAME} .
+echo ${DOCKERNAME}
+docker build -t ${DOCKERNAME} .
 docker push ${DOCKERNAME}
 
 
