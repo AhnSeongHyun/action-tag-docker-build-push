@@ -20,12 +20,10 @@ fi
 
 TAG=$(echo ${GITHUB_REF} | sed -e "s/refs\/tags\///g")
 
-echo ${INPUT_PASSWORD} | docker login -u ${INPUT_USERNAME} --password-stdin 
+echo ${INPUT_PASSWORD} | docker login -u ${INPUT_USERNAME} --password-stdin
 
 DOCKERNAME="${INPUT_REPO_NAME}:${TAG}"
-echo ${DOCKERNAME}
 docker build -t ${DOCKERNAME} .
 docker push ${DOCKERNAME}
-
 
 docker logout
