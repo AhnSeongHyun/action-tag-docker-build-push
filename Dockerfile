@@ -1,6 +1,6 @@
 FROM docker:19.03.2
 LABEL "com.github.actions.name"="Tag Buil Publish Docker"
-LABEL "com.github.actions.description"="Uses the git branch as the docker tag and pushes the container"
+LABEL "com.github.actions.description"="docker build and push to docker-hub only push tag"
 LABEL "com.github.actions.icon"="anchor"
 LABEL "com.github.actions.color"="blue"
 
